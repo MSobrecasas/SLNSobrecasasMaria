@@ -20,8 +20,8 @@
 	@using (Html.BeginForm("Create", "Receta", FormMethod.Post))
 	{
 			<div>
-				<h3>
-					@Html.LabelFor(model=>model.Titulo)
+				
+				<h3>@Html.LabelFor(model=>model.Titulo)
 					@Html.TextBoxFor(model=>model.Titulo)
 					@Html.ValidationMessageFor(model=>model.Titulo)
 				</h3>

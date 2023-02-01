@@ -116,5 +116,14 @@ th {
 }
 
 h3{
-    margin: 2px
+    margin: 2px;
+    
+}
+label {
+   display:inline-block;
+   width: 200px;
+}
+
+input{
+    justify-content: right;
 }
