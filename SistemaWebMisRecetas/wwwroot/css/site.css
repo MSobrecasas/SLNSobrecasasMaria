@@ -60,7 +60,7 @@ img {
     align-items: center;
 }
 
-nav ul li , li__sidebar ul li  {
+nav ul li , .li__sidebar li  {
     list-style: none;
     margin: 1rem;
 }
@@ -113,4 +113,8 @@ th, td {
 
 th {
     background: #eee;
+}
+
+h3{
+    margin: 2px
 }
