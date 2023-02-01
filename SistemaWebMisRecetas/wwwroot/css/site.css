@@ -1,0 +1,116 @@
+﻿* {
+    margin: 0;
+}
+
+body {
+    background-color: #F7A4A4;
+    height: 75vh;
+}
+
+header {
+    background-color: #FEBE8C;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 15vh;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 75vh;
+}
+nav {
+    background-color: #FFFBC1;
+}
+
+aside {
+    background-color: #B6E2A1;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    margin: 1.5rem ;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+footer {
+    background-color: #FEBE8C;
+    height: 10vh;
+}
+
+img {
+    width: 300px;
+}
+.img__container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li , li__sidebar ul li  {
+    list-style: none;
+    margin: 1rem;
+}
+
+a{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+main, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    justify-content: right;
+    padding-right: 2rem;
+}
+.receta, 
+.titulo__receta,
+.details__receta{
+    border: 1px solid black;
+}
+.receta{
+    text-align: center
+}
+.details__receta_autor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+main{
+    padding: 2rem
+}
+p {
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+th, td {
+    width: 150px;
+    vertical-align: middle;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+    text-align: center;
+}
+
+
+th {
+    background: #eee;
+}

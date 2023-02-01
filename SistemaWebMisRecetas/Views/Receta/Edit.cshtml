@@ -1,0 +1,70 @@
+﻿
+@model SistemaWebMisRecetas.Models.Receta
+
+
+@{
+	ViewData["Title"] = "Create Receta";
+}
+
+@section SideBar{ 
+			<h1>Administrar Recetas</h1>
+					<ul>
+						<li>@Html.ActionLink("Index","Index","Receta")</li>
+					 </ul>
+}
+<section class="create">
+
+	<div>
+		<h1>Modicar Receta</h1>
+	</div>
+
+	@using (Html.BeginForm("Edit", "Receta", FormMethod.Post))
+	{
+				<div>
+					<h3>
+				@Html.LabelFor(model=>model.Titulo)
+				@Html.TextBoxFor(model=>model.Titulo)
+				@Html.ValidationMessageFor(model=>model.Titulo)
+					</h3>
+					<h3>
+				@Html.LabelFor(model=>model.Categoria)
+				@Html.TextBoxFor(model=>model.Categoria)
+				@Html.ValidationMessageFor(model=>model.Categoria)
+					</h3>
+					<h3>
+				@Html.LabelFor(model=>model.Ingredientes)
+				@Html.TextBoxFor(model=>model.Ingredientes)
+				@Html.ValidationMessageFor(model=>model.Ingredientes)
+					</h3>
+					<h3>
+				@Html.LabelFor(model=>model.Instrucciones)
+				@Html.TextBoxFor(model=>model.Instrucciones)
+				@Html.ValidationMessageFor(model=>model.Instrucciones)
+					</h3>
+					<h3>
+				@Html.LabelFor(model=>model.Nombre)
+				@Html.TextBoxFor(model=>model.Nombre)
+				@Html.ValidationMessageFor(model=>model.Nombre)
+					</h3>
+					<h3>
+				@Html.LabelFor(model=>model.Apellido)
+				@Html.TextBoxFor(model=>model.Apellido)
+				@Html.ValidationMessageFor(model=>model.Apellido)
+					</h3>
+					<h3>
+				@Html.LabelFor(model=>model.Edad)
+				@Html.TextBoxFor(model=>model.Edad)
+				@Html.ValidationMessageFor(model=>model.Edad)
+					</h3>
+					<h3>
+				@Html.LabelFor(model=>model.Email)
+				@Html.TextBoxFor(model=>model.Email)
+				@Html.ValidationMessageFor(model=>model.Email)
+					</h3>
+
+				</div>			
+
+				<input  type="submit" action="Edit"/>
+		@Html.ActionLink("Volver a Index","Index","Home")
+	}
+</section>

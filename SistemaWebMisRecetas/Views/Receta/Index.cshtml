@@ -1,0 +1,38 @@
+﻿@model IEnumerable<SistemaWebMisRecetas.Models.Receta>
+@{
+	ViewData["Title"] = "Index Recetas";
+}
+@section SideBar{ 
+	<h1>Administrar Recetas</h1>
+			<ul class="li__sidebar">
+				<li>@Html.ActionLink("Index","Index","Receta")</li>
+				<li>@Html.ActionLink("Crear","Create","Receta")</li>  
+			 </ul>
+}
+	<table>
+		<tr>
+			<th>@Html.DisplayNameFor(model=>model.Id)</th>
+			<th>@Html.DisplayNameFor(model=>model.Titulo)</th>
+			<th>@Html.DisplayNameFor(model=>model.Nombre)</th>
+			<th></th>
+
+		</tr>
+	@foreach (var item in Model)
+	{
+			<tr>
+				<td>
+							@Html.DisplayFor(modelItem=>item.Id)
+				</td> 
+				<td>
+					@Html.ActionLink(item.Titulo,"Details","Receta",new {id=item.Id})
+				</td> 
+				<td>
+					@Html.ActionLink(item.Nombre + " "+ item.Apellido,"GetByName","Receta",new {name=item.Nombre,lastname=item.Apellido})
+				</td> 		
+				<td>
+							@Html.ActionLink("Editar","Edit","Receta",new {id=item.Id})
+							@Html.ActionLink("Eliminar","Delete","Receta",new {id=item.Id})
+				</td>
+			</tr>
+	}
+	</table>
